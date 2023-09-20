@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .edit{
+            background-color: black;
+            color: red;
+            font-size: 40px;
+            text-transform: uppercase;
+            padding: 2em, 0;
+        }
+    </style>
+</head>
+<body>
+   <ul>
+    <li>
+        <input type="text" name="yourName" id="Name">
+    </li>
+    <li>
+        <button>add Name</button>
+    </li>
+   </ul>
+
+   <p></p>
+</body>
+
+<script>
+    
+//  callNAme()
+
+// function callNAme(){
+//     let name = prompt('what is your name')
+//     return `my name is ${name} and i am ${age} from ${town} `
+// }
+
+
+        const inp = document.querySelector('input')
+        const para = document.querySelector('p')
+        const btn = document.querySelector('button')
+
+        btn.addEventListener('click', addName) 
+
+        function addName(){
+            let myName = inp.value
+            para.classList.add('edit')
+            let img = document.createElement('img')
+            //para.textContent = myName
+            //img.setAttribute('src', 'https://img.a.transfermarkt.technology/portrait/big/546543-1681827179.jpg?lm=1')
+            para.classList.toggle('image')
+            para.classList.remove('edit')
+            //para.append(img)
+        }
+        btn.setAttribute('id', 'btn')
+        //btn.id=''
+        btn.removeAttribute('id')
+</script>
+</html>

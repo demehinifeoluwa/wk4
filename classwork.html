@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork</title>
+    <link rel="stylesheet" href="./classwork.css">
+    <link rel="icon" href="../wk36b5/image/favicon.ico">
+</head>
+<body>
+    <main>
+        <div class="picture">
+            <h2>footballers images</h2>
+
+        </div>
+        <div class="buttons">
+            <button>image one</button>
+            <button>image two</button>
+            <button>image three</button>
+            <button>random color</button>
+        </div>
+    </main>
+</body>
+
+<script>
+    const pic = document.getElementsByClassName('picture')[0]
+    const btn = document.querySelectorAll('button')
+
+    function changeOne(){
+        pic.classList.remove('img3')
+        pic.classList.remove('img2')
+        pic.classList.remove('picture')
+        pic.classList.add('img1')
+        title.textContent = ' = sky'
+        title.style.didsplay = 'block'
+    }
+    function changeTwo(){
+        pic.classList.remove('img1')
+        pic.classList.remove('img3')
+        pic.classList.remove('picture')
+        pic.classList.add('img2')
+        title.textContent = ' -Mountain'
+        title.style.textAlign = 'center'
+    }
+    function changeThree(){
+        pic.classList.remove('img1')
+        pic.classList.remove('img2')
+        pic.classList.remove('picture')
+        pic.classList.add('img3')
+        title.style.fontSize = '3rem'
+        title.textContent = '-cloud'
+        title.style.textTransform = 'uppercase'
+    }
+
+    function randomColor(){
+        pic.style.background =  `rgb(${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)},${Math.floor(Math.random()*255)})`
+    }
+    btn[0].addEventListener('click', changeOne)
+    btn[1].addEventListener('click', changeTwo)
+    btn[2].addEventListener('click', changeThree)
+    btn[3].addEventListener('click', randomColor)
+</script>
+</html>

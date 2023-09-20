@@ -1,0 +1,37 @@
+.html{
+    background-color: black;
+    color: green;
+}
+
+main{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 300px);
+    gap: 25px;
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(1, 200px);
+    gap: 30px;
+}
+
+.picture{
+    background: green;
+}
+
+.img1{
+    background-size: cover;
+    background-size: 80px, 30px;
+    background: url(./vini\ jr.webp);
+}
+.img2{
+    background-size: cover;
+    background-size: 80px, 30px;
+    background: url(./beach.jpg);
+}
+.img3{
+    background-size: cover;
+    background-size: 80px, 30px;
+    background: url(./sand\ beach.jpg);
+}

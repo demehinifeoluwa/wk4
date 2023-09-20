@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <style>
+    html{
+        background-color: green;
+    }
+   </style>
+   <link rel="icon" href="./favicon.ico">
+    <title>Ife Assignment</title>
+</head>
+<body>
+    <h1>Week6 Assignment</h1>
+    <h2>No.1</h2>
+    <code>
+        <p id="myButton"></p>
+    </code>
+    <button type="button" name="firstBtn" onclick="getElementById('myButton').innerHTML = 'Button clicked!'">Click me!</button>
+
+    <h2>No.2</h2>
+    <input type="text" id="myInput">
+    <button id="mySubmitButton." type="submit">Submit</button>
+
+    <h2>No.3</h2>
+    <input type="number" name="num1" id="first">
+    <input type="number" name="num2" id="second">
+    <button type="button" onclick="document.querySelector('#sumButn')" id="sumButn">Calculate Sum</button>
+    <code>
+        <p id="sum"></p>
+    </code>
+
+    <h2>No.4</h2>
+    <code>
+        <p class="myFav">This text will be replaced!</p>
+    </code>
+    <button type="button" id="changeTextButton" onclick="document.getElementsByClassName('myFav').innerHTML = 'New text here!'">Click me!</button>
+
+    <h2>No.5</h2>
+    <code>
+        <p id="keyDown"></p>
+    </code>
+
+</body>
+<script>
+// Question1
+const btn = document.querySelectorAll('button');
+
+function clickEvent(){
+    alert('Button clicked!');
+}
+
+btn[0].addEventListener('click', clickEvent);
+
+// Question2
+function submitEvent() {
+    let inputValue = document.getElementById('myInput').value;
+    alert(inputValue);
+}
+
+btn[1].addEventListener('click', submitEvent)
+// Question3
+function calculateSum() {
+    let num1 = document.getElementById('first')
+    let num2 = document.getElementById('second')
+    const sum = Number(num1.value) + Number(num2.value)
+    const pEl = document.getElementById('sum')
+    pEl.textContent = sum
+    return sum
+}
+
+const sumBtn = document.querySelector('button')
+// Question4
+function myFav() {
+    const myFavE = document.querySelector('.myFav');
+    myFavE.textContent = 'New text here!';
+}
+
+document.getElementById('changeTextButton').addEventListener('click', myFav );
+
+// Question5
+const keyCodeDisplay = document.getElementById('keyDown')
+
+function key(evt) {
+    keyDown.textContent = 'key code:' + evt.keyCode
+    alert(key())
+}
+
+document.addEventListener('keydown', key)
+
+</script>
+</html>
